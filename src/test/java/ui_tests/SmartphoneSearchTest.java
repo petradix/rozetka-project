@@ -6,7 +6,8 @@ import pages.HomePage;
 import pages.SamsungGalaxyS5Page;
 import pages.SearchPage;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class SmartphoneSearchTest extends TestBase {
 
@@ -17,7 +18,7 @@ public class SmartphoneSearchTest extends TestBase {
     SearchPage searchPage = new SearchPage();
 
     @Test
-    public void setUpPreconditions(){
+    public void setUpPreconditions() {
 
         page.open();
 
@@ -28,7 +29,7 @@ public class SmartphoneSearchTest extends TestBase {
 
     @Test(dependsOnMethods = {"setUpPreconditions"})
 
-    public void searchSmartphoneAndVerifyCharacteristics(){
+    public void searchSmartphoneAndVerifyCharacteristics() {
 
         page.searchProduct(TestData.SAMSUNG_G900H_GALAXY_S5);
 
@@ -38,6 +39,8 @@ public class SmartphoneSearchTest extends TestBase {
 
         assertTrue(samsungGalaxyS5Page.verifyProductContent().getText().contains(TestData.SAMSUNG_PROCESSOR));
 
+        assertEquals(page.findManufactures().size(), 8);
+        assertEquals(page.clickAppleManufacture(), 1);
     }
 
 }
