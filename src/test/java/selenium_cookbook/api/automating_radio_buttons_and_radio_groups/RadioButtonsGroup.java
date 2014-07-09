@@ -1,4 +1,4 @@
-package selenium_coockbook.api.automating_radio_buttons_and_radio_groups;
+package selenium_cookbook.api.automating_radio_buttons_and_radio_groups;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

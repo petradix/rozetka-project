@@ -1,4 +1,4 @@
-package selenium_coockbook.api.utils;
+package selenium_cookbook.api.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

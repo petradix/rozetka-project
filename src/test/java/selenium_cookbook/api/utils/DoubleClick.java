@@ -1,4 +1,4 @@
-package selenium_coockbook.api.utils;
+package selenium_cookbook.api.utils;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

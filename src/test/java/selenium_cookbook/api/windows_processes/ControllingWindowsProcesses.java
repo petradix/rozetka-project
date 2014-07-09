@@ -1,4 +1,4 @@
-package selenium_coockbook.api.windows_processes;
+package selenium_cookbook.api.windows_processes;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

@@ -1,4 +1,4 @@
-package selenium_coockbook.api.dropdowns_and_lists;
+package selenium_cookbook.api.dropdowns_and_lists;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
