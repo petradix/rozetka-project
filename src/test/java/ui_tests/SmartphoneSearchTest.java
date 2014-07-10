@@ -39,8 +39,6 @@ public class SmartphoneSearchTest extends TestBase {
 
         assertTrue(samsungGalaxyS5Page.verifyProductContent().getText().contains(TestData.SAMSUNG_PROCESSOR));
 
-        assertEquals(page.findManufactures().size(), 8);
-        assertEquals(page.clickAppleManufacture(), 1);
     }
 
 }

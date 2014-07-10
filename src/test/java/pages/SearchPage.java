@@ -17,7 +17,7 @@ public class SearchPage extends TestBase {
 
     protected WebElement searchLinkElem;
 
-    public String  verifyProductLink(){
+    public String verifyProductLink() {
 
         Log4Test.info("Verify product link");
 
@@ -27,7 +27,7 @@ public class SearchPage extends TestBase {
 
     }
 
-    public void openProductLink(){
+    public void openProductLink() {
 
         Log4Test.info("Open product characteristics");
 

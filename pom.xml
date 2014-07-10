@@ -17,7 +17,7 @@
         <profile>
             <id>firefox_local</id>
             <properties>
-                <browser.name>firefox</browser.name>
+                <browser.name>FIRE_FOX</browser.name>
             </properties>
         </profile>
         <profile>

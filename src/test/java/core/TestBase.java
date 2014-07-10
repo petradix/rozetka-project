@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import ui_tests.TestData;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -19,7 +20,7 @@ public class TestBase {
 
     {
 
-//        webDriver = WebDriverFactory.getWebDriver(TestData.BROWSER_NAME);
+        webDriver = WebDriverFactory.getWebDriver(TestData.BROWSER_NAME);
 
         wait = new WebDriverWait(webDriver, 30);
 

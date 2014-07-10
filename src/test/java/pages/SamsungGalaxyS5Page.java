@@ -12,11 +12,11 @@ public class SamsungGalaxyS5Page extends TestBase {
 
     protected WebElement productContent;
 
-    public WebElement verifyProductContent(){
+    public WebElement verifyProductContent() {
 
         Log4Test.info("Verify product content");
 
-        return  productContent = webDriver.findElement(productDescription);
+        return productContent = webDriver.findElement(productDescription);
 
     }
 }
