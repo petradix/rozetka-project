@@ -27,7 +27,7 @@ public class HomePage extends TestBase {
         Log4Test.info("Search product " + productName);
         webDriver.findElement(searchString).clear();
         webDriver.findElement(searchString).sendKeys(productName);
-        webDriver.findElement(searchString).sendKeys(Keys.RETURN);
+        webDriver.findElement(searchString).click();
     }
 }
 
