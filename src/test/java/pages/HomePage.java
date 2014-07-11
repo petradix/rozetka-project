@@ -3,12 +3,13 @@ package pages;
 
 import core.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import utils.Log4Test;
 
 public class HomePage extends TestBase {
 
-    protected By searchString = By.className("header-search-input-text");
+    protected By searchField = By.className("header-search-input-text");
+
+    protected By searchButton = By.className("btn-link-i");
 
     private String URL = "http://rozetka.com.ua/";
 
@@ -25,9 +26,9 @@ public class HomePage extends TestBase {
 
     public void searchProduct(String productName) {
         Log4Test.info("Search product " + productName);
-        webDriver.findElement(searchString).clear();
-        webDriver.findElement(searchString).sendKeys(productName);
-        webDriver.findElement(searchString).click();
+        webDriver.findElement(searchField).clear();
+        webDriver.findElement(searchField).sendKeys(productName);
+        webDriver.findElement(searchButton).click();
     }
 }
 
