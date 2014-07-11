@@ -8,7 +8,7 @@
 
 
             <class name="ui_tests.SmartphoneSearchTest"/>
-
-            </classes>
+            <!--<class name="selenium_cookbook.data_driven_testing.TestNGDDT"/>-->
+        </classes>
     </test>
 </suite>
