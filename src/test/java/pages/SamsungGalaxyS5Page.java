@@ -1,12 +1,11 @@
 package pages;
 
-import core.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Log4Test;
 
 
-public class SamsungGalaxyS5Page extends TestBase {
+public class SamsungGalaxyS5Page extends GeneralPage {
 
     protected By productDescription = By.className("pp-description");
 
@@ -16,7 +15,7 @@ public class SamsungGalaxyS5Page extends TestBase {
 
         Log4Test.info("Verify product content");
 
-        return productContent = webDriver.findElement(productDescription);
+        return productContent = elementIsLocated(productDescription);
 
     }
 }

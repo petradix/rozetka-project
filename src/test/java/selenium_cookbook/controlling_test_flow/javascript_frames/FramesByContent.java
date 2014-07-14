@@ -43,7 +43,9 @@ public class FramesByContent {
     @Test
     public void testFramesByIndex() {
 
-        List<WebElement> frames = driver.findElements(By.tagName("frame"));
+        List<WebElement> frames = driver.findElements(By.tagName("frame2"));
+
+        System.out.println(frames.size());
 
         for (WebElement frame : frames) {
 

@@ -1,11 +1,10 @@
 package pages;
 
 
-import core.TestBase;
 import org.openqa.selenium.By;
 import utils.Log4Test;
 
-public class HomePage extends TestBase {
+public class HomePage extends GeneralPage {
 
     protected By searchField = By.className("header-search-input-text");
 
@@ -26,9 +25,9 @@ public class HomePage extends TestBase {
 
     public void searchProduct(String productName) {
         Log4Test.info("Search product " + productName);
-        webDriver.findElement(searchField).clear();
-        webDriver.findElement(searchField).sendKeys(productName);
-        webDriver.findElement(searchButton).click();
+        elementIsLocated(searchField).clear();
+        elementIsLocated(searchField).sendKeys(productName);
+        elementIsLocated(searchButton).click();
     }
 }
 

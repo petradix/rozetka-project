@@ -1,6 +1,5 @@
 package pages;
 
-import core.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Log4Test;
@@ -8,7 +7,7 @@ import utils.Log4Test;
 /**
  * Created by Walker on 7/26/14.
  */
-public class SearchPage extends TestBase {
+public class SearchPage extends GeneralPage {
 
 
     protected By searchProductLink =
@@ -21,7 +20,7 @@ public class SearchPage extends TestBase {
 
         Log4Test.info("Verify product link");
 
-        searchLinkElem = webDriver.findElement(searchProductLink);
+        searchLinkElem = elementIsLocated(searchProductLink);
 
         return searchLinkElem.getText();
 

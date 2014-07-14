@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertEquals;
 
 
-public class PageFactroyAnnotations {
+public class PageFactoryAnnotations {
 
     private static StringBuffer verificationErrors = new StringBuffer();
     WebDriver driver = new FirefoxDriver();
