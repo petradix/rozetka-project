@@ -12,5 +12,7 @@ public class TestData {
 
     public static final String SAMSUNG_PROCESSOR = "Exynos 5422 (Quad 1.9 ГГц + Quad 1.3 ГГц)";
 
+    public static final String ROZETKA_URL = "http://rozetka.com.ua/";
+
 
 }

@@ -1,33 +1,27 @@
 package pages;
 
 
-import org.openqa.selenium.By;
 import utils.Log4Test;
 
 public class HomePage extends GeneralPage {
 
-    protected By searchField = By.className("header-search-input-text");
-
-    protected By searchButton = By.className("btn-link-i");
-
-    private String URL = "http://rozetka.com.ua/";
-
-    public void open() {
+    public void open(String URL) {
 
         webDriver.get(URL);
+
         Log4Test.info("Open WebUrl " + URL);
 
     }
 
-    public boolean isOpened() {
+    public boolean isOpened(String URL) {
         return webDriver.getCurrentUrl().equals(URL);
     }
 
     public void searchProduct(String productName) {
         Log4Test.info("Search product " + productName);
-        elementIsLocated(searchField).clear();
-        elementIsLocated(searchField).sendKeys(productName);
-        elementIsLocated(searchButton).click();
+        elementIsLocated(getLocator("searchField")).clear();
+        elementIsLocated(getLocator("searchField")).sendKeys(productName);
+        elementIsLocated(getLocator("searchButton")).click();
     }
 }
 
