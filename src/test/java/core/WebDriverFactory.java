@@ -3,6 +3,8 @@ package core;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.io.IOException;
@@ -29,7 +31,10 @@ public class WebDriverFactory {
         switch (browserType) {
 
             case FIRE_FOX:
-                return new FirefoxDriver();
+                ProfilesIni profile = new ProfilesIni();
+                FirefoxProfile ffprofile = profile.getProfile("SELENIUM");
+
+                return new FirefoxDriver(ffprofile);
 
             case CHROME:
                 return new ChromeDriver();
