@@ -14,6 +14,7 @@ public class SearchPage extends GeneralPage {
 
         Log4Test.info("Verify product link");
 
+
         searchLinkElem = elementIsLocated(getLocator("searchProductLink"));
 
         return searchLinkElem.getText();
@@ -23,6 +24,8 @@ public class SearchPage extends GeneralPage {
     public void openProductLink() {
 
         Log4Test.info("Open product characteristics");
+
+        searchLinkElem = elementIsLocated(getLocator("searchProductLink"));
 
         searchLinkElem.click();
     }

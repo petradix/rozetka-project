@@ -22,7 +22,7 @@ public class TestBase {
 
         webDriver = WebDriverFactory.getWebDriver(TestData.BROWSER_NAME);
 
-        wait = new WebDriverWait(webDriver, 30);
+        wait = new WebDriverWait(webDriver, 50);
 
         webDriver.manage().window().maximize();
 

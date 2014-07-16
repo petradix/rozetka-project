@@ -19,6 +19,7 @@ public class HomePage extends GeneralPage {
 
     public void searchProduct(String productName) {
         Log4Test.info("Search product " + productName);
+        waitForPageLoaded(webDriver);
         elementIsLocated(getLocator("searchField")).clear();
         elementIsLocated(getLocator("searchField")).sendKeys(productName);
         elementIsLocated(getLocator("searchButton")).click();
