@@ -7,46 +7,40 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.io.IOException;
 
-/**
- * @author Sergii.Oliinyk
- */
-
 public class WebDriverFactory {
 
     static {
-      try {
+        try {
 //          System.setProperty("webdriver.ie.driver", WebDriverFactory.class.getClassLoader().getResource("iedriver.exe").getPath());
 //
 //          System.setProperty("webdriver.chrome.driver", WebDriverFactory.class.getClassLoader().getResource("drivers/windows/chromedriver.exe").getPath());
-          System.setProperty("webdriver.chrome.driver", WebDriverFactory.class.getClassLoader().getResource("drivers/mac/chromedriver").getPath());
+            System.setProperty("webdriver.chrome.driver", WebDriverFactory.class.getClassLoader().getResource("drivers/mac/chromedriver").getPath());
 
 
+        } catch (Exception e) {
+
+            System.out.println("Cannot launch FireFox or Chrome driver \n" + e.getMessage());
+        }
     }
 
-    catch (Exception e){
-
-        System.out.println("Cannot launch FireFox or Chrome driver \n" + e.getMessage());
-    }
-    }
-
-    public static WebDriver getWebDriver(BrowserTypes browserType)throws IOException {
+    public static WebDriver getWebDriver(BrowserTypes browserType) throws IOException {
 
 
-          switch (browserType){
+        switch (browserType) {
 
-              case FIRE_FOX:
-                  return new FirefoxDriver();
+            case FIRE_FOX:
+                return new FirefoxDriver();
 
-              case CHROME:
-                  return new ChromeDriver();
+            case CHROME:
+                return new ChromeDriver();
 
-              case IE:
-                  return new InternetExplorerDriver();
+            case IE:
+                return new InternetExplorerDriver();
 
-              default:
-                  throw new IllegalArgumentException("Browser is not supported" + browserType);
+            default:
+                throw new IllegalArgumentException("Browser is not supported" + browserType);
 
-          }
+        }
     }
 
 }

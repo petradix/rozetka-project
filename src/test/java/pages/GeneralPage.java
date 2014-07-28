@@ -10,14 +10,10 @@ import java.util.Properties;
 
 import static org.testng.AssertJUnit.assertFalse;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Sergii.Oliinyk
- */
 public class GeneralPage extends TestBase {
 
 
-    public void open(String URL )
+    public void open(String URL)
 
     {
 
@@ -59,28 +55,27 @@ public class GeneralPage extends TestBase {
         ExpectedCondition<Boolean> expectation = new
                 ExpectedCondition<Boolean>() {
                     public Boolean apply(WebDriver driver) {
-                        return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+                        return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
                     }
                 };
 
         try {
             wait.until(expectation);
-        } catch(Throwable error) {
-            assertFalse("Timeout waiting for Page Load Request to complete.",true);
+        } catch (Throwable error) {
+            assertFalse("Timeout waiting for Page Load Request to complete.", true);
         }
     }
-
 
 
     public By getLocator(String logicalElementName)
 
     {
-        Properties properties  = new Properties();
+        Properties properties = new Properties();
 
         try {
             properties.load(GeneralPage.class.getResourceAsStream("/object.map.properties"));
 
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -90,18 +85,18 @@ public class GeneralPage extends TestBase {
 
         String locatorValue = locator.split(">")[1];
 
-        if(locatorType.toLowerCase().equals("id"))
+        if (locatorType.toLowerCase().equals("id"))
             return By.id(locatorValue);
 
-        else if((locatorType.toLowerCase().equals("classname")) ||
+        else if ((locatorType.toLowerCase().equals("classname")) ||
                 (locatorType.toLowerCase().equals("class")))
             return By.className(locatorValue);
 
-        else if((locatorType.toLowerCase().equals("cssselector")) ||
+        else if ((locatorType.toLowerCase().equals("cssselector")) ||
                 (locatorType.toLowerCase().equals("css")))
             return By.cssSelector(locatorValue);
 
-        else if(locatorType.toLowerCase().equals("xpath"))
+        else if (locatorType.toLowerCase().equals("xpath"))
             return By.xpath(locatorValue);
 
         else
