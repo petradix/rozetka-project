@@ -26,8 +26,8 @@ public class SmartphoneSearchTest extends TestBase {
     }
 
 
-    @Test(dependsOnMethods = {"setUpPreconditions"})
-
+    @Test(dependsOnMethods = {"setUpPreconditions"}, enabled = false)
+    
     public void searchSmartphoneAndVerifyCharacteristics() {
 
         homePage.searchProduct(TestData.SAMSUNG_G900H_GALAXY_S5);
