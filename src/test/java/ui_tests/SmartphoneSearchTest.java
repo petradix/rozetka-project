@@ -7,6 +7,7 @@ import pages.SamsungGalaxyS5Page;
 import pages.SearchPage;
 
 import static org.testng.Assert.assertTrue;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class SmartphoneSearchTest extends TestBase {
 
@@ -26,15 +27,15 @@ public class SmartphoneSearchTest extends TestBase {
     }
 
 
-    @Test(dependsOnMethods = {"setUpPreconditions"}, enabled = false)
-    
-    public void searchSmartphoneAndVerifyCharacteristics() {
+    @Test(dependsOnMethods = {"setUpPreconditions"}, enabled = true)
+
+    public void testSearchSmartphoneAndVerifyCharacteristics() {
 
         homePage.searchProduct(TestData.SAMSUNG_G900H_GALAXY_S5);
 
-//        assertEquals(searchPage.verifyProductLink(), TestData.SAMSUNG_G900H_GALAXY_S5);
-//
-//        searchPage.openProductLink();
+        assertEquals(searchPage.verifyProductLink(), TestData.SAMSUNG_G900H_GALAXY_S5);
+
+        searchPage.openProductLink();
 
         assertTrue(samsungGalaxyS5Page.verifyProductContent().getText().contains(TestData.SAMSUNG_PROCESSOR));
 
