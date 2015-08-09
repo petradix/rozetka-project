@@ -1,0 +1,1 @@
+Selenium tests developed for rozetka.com.ua
